@@ -1,29 +1,13 @@
 export default function Home() {
   return (
-    <main style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '100vh',
-      backgroundColor: '#FFFFFF',
-      color: '#000000'
-    }}>
-      <h1 style={{ fontSize: '3rem', fontWeight: 'bold', letterSpacing: '-1px', margin: 0 }}>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-white text-black">
+      <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
         Yeni Sezon
       </h1>
-      <p style={{ color: '#666', marginTop: '10px', fontSize: '1.2rem' }}>
+      <p className="text-lg md:text-xl text-neutral-500 mb-8">
         Zamansız parçalar. Siyah ve beyaz.
       </p>
-      <button style={{
-        marginTop: '30px',
-        padding: '12px 24px',
-        backgroundColor: '#000',
-        color: '#fff',
-        border: 'none',
-        cursor: 'pointer',
-        fontSize: '1rem'
-      }}>
+      <button className="bg-black text-white px-8 py-3 text-sm font-medium hover:bg-neutral-800 transition-colors">
         Alışverişe Başla
       </button>
     </main>
