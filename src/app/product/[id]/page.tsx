@@ -44,8 +44,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         </Link>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="aspect-[3/4] bg-neutral-100 flex items-center justify-center">
-            <span className="text-neutral-400 text-lg">Büyük Görsel</span>
+          <div className="aspect-[3/4] bg-neutral-100 overflow-hidden border border-neutral-100">
+            <img 
+              src={product.image} 
+              alt={product.name}
+              className="object-cover w-full h-full"
+            />
           </div>
 
           <div className="flex flex-col">
