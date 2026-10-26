@@ -69,9 +69,9 @@ export default function CartPage() {
                 <span>Toplam</span>
                 <span>{totalPrice.toFixed(2)} TL</span>
               </div>
-              <button className="w-full bg-black text-white py-3 text-sm font-medium hover:bg-neutral-800 transition-colors">
+              <Link href="/checkout" className="block text-center w-full bg-black text-white py-3 text-sm font-medium hover:bg-neutral-800 transition-colors">
                 Ödemeye Geç
-              </button>
+              </Link>
             </div>
           </div>
         )}
