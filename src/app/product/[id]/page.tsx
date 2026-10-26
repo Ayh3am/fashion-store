@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Navbar from '../../../components/Navbar';
 import { supabase } from '../../../lib/supabase';
 import { useCartStore } from '../../../store/useCartStore';
-
+import toast from 'react-hot-toast'; 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const [product, setProduct] = useState<any>(null);
   const [selectedSize, setSelectedSize] = useState<string>('M');
