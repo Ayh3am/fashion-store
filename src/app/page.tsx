@@ -34,8 +34,12 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {products.map((product) => (
             <Link href={`/product/${product.id}`} key={product.id} className="group cursor-pointer block">
-              <div className="aspect-[3/4] bg-neutral-200 mb-4 flex items-center justify-center group-hover:opacity-80 transition-opacity">
-                <span className="text-neutral-400 text-sm">Görsel</span>
+              <div className="aspect-[3/4] bg-neutral-200 mb-4 overflow-hidden relative">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               
               <div>
