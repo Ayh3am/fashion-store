@@ -42,6 +42,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       price: `${product.price} TL`,
       size: selectedSize,
       quantity: 1,
+      image: product.image, // ضفنا هالسطر
     });
      toast.success('Ürün sepete eklendi!');
   };
