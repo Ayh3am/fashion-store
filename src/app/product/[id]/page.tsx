@@ -43,7 +43,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       size: selectedSize,
       quantity: 1,
     });
-    alert('Ürün sepete eklendi!');
+     toast.success('Ürün sepete eklendi!');
   };
 
   return (
