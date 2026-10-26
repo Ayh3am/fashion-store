@@ -1,12 +1,6 @@
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
-
-// بيانات وهمية (Mock Data) مؤقتاً عشان نشوف الشكل
-const products = [
-  { id: 1, name: 'Oversize Basic T-Shirt', price: '249.99 TL', category: 'Erkek' },
-  { id: 2, name: 'Minimalist Black Dress', price: '899.00 TL', category: 'Kadın' },
-  { id: 3, name: 'White Linen Shirt', price: '549.50 TL', category: 'Erkek' },
-  { id: 4, name: 'Classic Trench Coat', price: '1499.00 TL', category: 'Kadın' },
-];
+import { products } from '../lib/mockData';
 
 export default function Home() {
   return (
@@ -32,7 +26,7 @@ export default function Home() {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {products.map((product) => (
-            <div key={product.id} className="group cursor-pointer">
+            <Link href={`/product/${product.id}`} key={product.id} className="group cursor-pointer block">
               {/* Product Image Placeholder */}
               <div className="aspect-[3/4] bg-neutral-200 mb-4 flex items-center justify-center group-hover:opacity-80 transition-opacity">
                 <span className="text-neutral-400 text-sm">Görsel</span>
@@ -44,7 +38,7 @@ export default function Home() {
                 <h3 className="text-sm font-medium truncate">{product.name}</h3>
                 <p className="text-sm font-bold mt-1">{product.price}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
