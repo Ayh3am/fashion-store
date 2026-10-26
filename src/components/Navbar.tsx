@@ -29,16 +29,38 @@ export default function Navbar() {
             <Link href="#" className="text-neutral-500 hover:text-black transition-colors">{t.nav.men}</Link>
           </div>
 
-          <div className="flex items-center space-x-4">
-            {/* زر تبديل اللغة */}
+          <div className="flex items-center space-x-6">
+            {/* زر اللغة */}
             <button onClick={toggleLanguage} className="text-sm font-bold hover:text-neutral-600 uppercase">
               {lang === 'tr' ? 'EN' : 'TR'}
             </button>
             
             <button className="text-sm font-medium hover:text-neutral-600">{t.nav.login}</button>
             
-            <Link href="/cart" className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-neutral-800 transition-colors block">
-              {t.nav.cart} ({totalItems})
+            {/* أيقونة السلة الجديدة */}
+            <Link href="/cart" className="relative group flex items-center justify-center text-black hover:text-neutral-600 transition-colors">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="24" height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="w-6 h-6"
+              >
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              
+              {/* الدائرة السوداء اللي بتعرض عدد القطع */}
+              {totalItems > 0 && (
+                <span className="absolute -top-1.5 -right-2 bg-black text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Link>
           </div>
 
