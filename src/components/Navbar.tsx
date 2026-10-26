@@ -28,12 +28,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             <button className="text-sm font-medium hover:text-neutral-600">TR / EN</button>
             <button className="text-sm font-medium hover:text-neutral-600">Giriş</button>
-            <button className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-neutral-800 transition-colors">
+            <Link href="/cart" className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-neutral-800 transition-colors">
               Sepet ({totalItems})
-            </button>
+            </Link>
           </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
